@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US" class="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>Chess Game</title>
+    <link id="board-css" href="./styles/board.css" rel="stylesheet">
+    <link id="board-buttons-css" href="./styles/board_extra.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="main" class="main">
+      <div id="chess-ui">
+        <div id="chessboard-container">
+          <div class="chessboard" id="chessboard"></div>
+          <coords id="ranks" class="ranks">
+            <coord>8</coord><coord>7</coord><coord>6</coord><coord>5</coord>
+            <coord>4</coord><coord>3</coord><coord>2</coord><coord>1</coord>
+          </coords>
+          <coords id="files" class="files">
+            <coord>a</coord><coord>b</coord><coord>c</coord><coord>d</coord>
+            <coord>e</coord><coord>f</coord><coord>g</coord><coord>h</coord>
+          </coords>
+        </div>
+        <div id="arrow-controls">
+          <button id="move<<-"> <<- </button>
+          <button id="move<-"> <- </button>
+          <button id="move->"> -> </button>
+          <button id="move->>"> ->> </button>
+        </div>
+        <div id="other-buttons">
+          <button id="forfeit-button"> Forfeit </button>
+          <button class="home-button"> Home </button>
+        </div>
+      </div>
+      <a id="github-link" href="" target="_blank"></a>
+    </div>
+    <div id="bot-registration-popup" class="popup">
+      <div class="bot-registration-popup-content">
+        <p id="bot-popup-title"></p>
+        <p id="boardid-text"></p>
+        <p id="gamecolor-text"></p>
+        <div class="password-row">
+          <p id="password-text" class="copy-target"></p>
+          <button id="copy-password-button" title="Copy password">📋</button>
+        </div>
+        <button class="home-button"> Home </button>
+      </div>
+    </div>
+    <div id="game-ended-popup" class="popup">
+      <div class="game-ended-popup-content">
+        <p id="game-ended-popup-message"></p>
+        <div>
+          <button id="ok-button">OK</button>
+          <button id="leave-button">Leave</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./scripts/var_helpers.js"></script>
+    <script type="module" src="./scripts/data.js"></script>
+    <script type="module" src="./scripts/game_loop.js"></script>
+    <script type="module" src="./scripts/game_buttons.js"></script>
+    <script type="module" src="./scripts/game_popups.js"></script>
+    <script src="./bot.js"></script>
+    <script type="module" src="./scripts/game.js"></script>
+   </body>
+</html>

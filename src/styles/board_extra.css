@@ -1,0 +1,174 @@
+/* ################################################# */
+/* Button and non-board related styles for game.html */
+/* ################################################# */
+
+
+/* Game buttons */
+
+#arrow-controls,
+#other-buttons {
+  display: flex;
+  gap: 0.8vmin;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#arrow-controls button,
+#other-buttons button {
+  font-size: 1.4vmin;
+  padding: 0.4vmin 0.8vmin;
+  min-width: 6vmin;
+  max-width: 10vmin;
+  border-radius: 0.5vmin;
+  background-color: #222;
+  color: white;
+  border: 1px solid #444;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  cursor: pointer;
+}
+
+#arrow-controls button:hover,
+#other-buttons button:hover {
+  background-color: #555;
+  transform: scale(1.03);
+}
+
+/* Disabled state for the button */
+.disabled {
+  background-color: #333 !important;
+  color: #adadad !important;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+/* Popup for game end */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.game-ended-popup-content {
+    background-color: #2e2e2e;
+    color: white;
+    border-radius: 1vmin;
+    width: 30vmin;
+    height: 15vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vmin;
+    text-align: center;
+}
+
+.game-ended-popup-content p {
+    font-size: 1.8vmin;
+    margin-bottom: 0.8vmin;
+    color: #ffffff;
+}
+
+.popup button {
+    margin: 1vmin;
+    padding: 1vmin 3vmin;
+    font-size: 1.2vmin;
+    cursor: pointer;
+    border: none;
+    background-color: #272727;
+    color: white;
+    border-radius: 0.5vmin;
+    transition: background-color 0.2s ease;
+}
+
+.popup button:hover {
+    background-color: #414141;
+}
+
+.bot-registration-popup-content {
+  background-color: #2e2e2e;
+  color: white;
+  border-radius: 1vmin;
+  padding: 3vmin;
+  width: 45vmin;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vmin;
+  text-align: left;
+  font-size: 1.5vmin;
+}
+
+.bot-registration-popup-content p {
+  margin: 0.5vmin 0;
+  color: #ffffff;
+}
+
+#bot-popup-title {
+  font-size: 2.2vmin;
+  font-weight: bold;
+  margin-bottom: 1vmin;
+  color: #ffffff;
+  text-align: left;
+  border-bottom: 1px solid #555;
+  padding-bottom: 0.5vmin;
+}
+
+.password-row {
+  display: flex;
+  align-items: center;
+  gap: 1vmin;
+}
+
+#copy-password-button {
+  background-color: #444;
+  color: white;
+  border: none;
+  margin: 0vmin;
+  padding: 0.5vmin 1vmin;
+  font-size: 1.5vmin;
+  border-radius: 0.5vmin;
+  cursor: pointer;
+}
+
+#copy-password-button:hover {
+  background-color: #666;
+}
+
+.bot-registration-popup-content .home-button {
+  align-self: flex-start;
+  margin-top: 2vmin;
+  padding: 0.8vmin 2vmin;
+  background-color: #272727;
+  color: white;
+  font-size: 1.4vmin;
+  border: none;
+  border-radius: 0.5vmin;
+  cursor: pointer;
+}
+
+.bot-registration-popup-content .home-button {
+    align-self: center;
+    width: auto;
+    padding: 1vmin 3vmin;
+}
+
+#github-link {
+  color: white;
+  font-size: 1.5vmin;
+  margin-top: 1.5vmin;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#github-link:hover {
+  text-decoration: underline;
+}

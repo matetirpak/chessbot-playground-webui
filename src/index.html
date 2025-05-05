@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selection</title>
+    <link id="pieces" href="./styles/game_selection.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="main">
+      <div id="main-box">
+        <div id="headline-text">Choose a color to start a game</div>
+        <label id="external-bot-option">
+          Use external bot (recommended)
+          <input type="checkbox" id="externalBotCheckbox">
+          <span class="checkmark"></span>
+        </label>
+        <div id="slider-container">
+          <input type="range" id="difficulty" name="difficulty" min="1" max="3" value="2">
+          <label for="difficulty">Bot Difficulty: <span id="difficulty-value">2</span></label>
+        </div>
+        <div class="color-selection">
+          <button id="black" class="color-button">♔</button>
+          <button id="random" class="color-button">🎲</button>
+          <button id="white" class="color-button">♚</button>
+        </div>
+      </div>
+      <a id="github-link" href="" target="_blank"></a>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

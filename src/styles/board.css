@@ -1,0 +1,188 @@
+/* ################################## */
+/* Board related styles for game.html */
+/* ################################## */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    height: 100vh;
+    margin: 0;
+} 
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vmin;
+}
+
+#chess-ui {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      row-gap: 1vh;
+}
+
+#chessboard-container {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+  }
+
+#chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 100%;
+    height: 100%;
+}
+  
+.field {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+}
+
+.marking {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 40%;
+    background-color: lightgreen;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 3;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.latest-move-marking {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+
+    transform: translate(-50%, -50%);
+}
+
+.bright {
+    background-color: rgb(255, 168, 18);
+}
+
+.dark {
+    background-color: rgb(154, 87, 1);
+}
+
+coords.ranks,
+coords.files {
+    position: absolute;
+    color: white;
+    font-size: 1.5vmin;
+    pointer-events: none;
+}
+coords.ranks {
+    left: calc(100% - 0.8em);
+    top: 0;
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(8, 1fr);
+}
+coords.files {
+    top: calc(100% - 1.5em);
+    left: 0.3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+
+/* Pieces */
+/* https://github.com/lichess-org/lila/tree/master/public/piece/cburnett */
+
+.whitepawn {
+    background-image: url('/assets/pieces/cburnett/wP.svg');
+}
+
+.blackpawn {
+    background-image: url('/assets/pieces/cburnett/bP.svg');
+}
+
+.whiteking {
+    background-image: url('/assets/pieces/cburnett/wK.svg');
+}
+
+.blackking {
+    background-image: url('/assets/pieces/cburnett/bK.svg');
+}
+
+.whitequeen {
+    background-image: url('/assets/pieces/cburnett/wQ.svg');
+}
+
+.blackqueen {
+    background-image: url('/assets/pieces/cburnett/bQ.svg');
+}
+
+.whiterook {
+    background-image: url('/assets/pieces/cburnett/wR.svg');
+}
+
+.blackrook {
+    background-image: url('/assets/pieces/cburnett/bR.svg');
+}
+
+.whitebishop {
+    background-image: url('/assets/pieces/cburnett/wB.svg');
+}
+
+.blackbishop {
+    background-image: url('/assets/pieces/cburnett/bB.svg');
+}
+
+.whiteknight {
+    background-image: url('/assets/pieces/cburnett/wN.svg');
+}
+
+.blackknight {
+    background-image: url('/assets/pieces/cburnett/bN.svg');
+}
+
+.whitepawn,
+.blackpawn,
+.whiterook,
+.blackrook,
+.whiteknight,
+.blackknight,
+.whitebishop,
+.blackbishop,
+.whitequeen,
+.blackqueen,
+.whiteking,
+.blackking {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  z-index: 2;
+}
